@@ -2,40 +2,17 @@
   <h1>Home Page</h1>
   <p>Welcome to the home page!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
-  <h1>Home Page</h1>
-  <p>Welcome to the home page!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down to see the footer stays fixed.</p>
+
+  @if (images) {
+    <ngb-carousel *ngIf="images.length">
+      <ng-template ngbSlide *ngFor="let img of images; let index = index">
+        <img [src]="img" alt="Random image {{ index + 1 }}" class="d-block w-100">
+        <div class="carousel-caption">
+          <h3>Slide {{ index + 1 }}</h3>
+          <p>Slide information</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  }
+
 </div>
